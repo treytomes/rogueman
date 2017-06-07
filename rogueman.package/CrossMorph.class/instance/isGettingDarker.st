@@ -1,0 +1,3 @@
+private
+isGettingDarker
+	^ isGettingDarker

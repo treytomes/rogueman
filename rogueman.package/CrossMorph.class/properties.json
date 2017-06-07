@@ -1,0 +1,13 @@
+{
+	"commentStamp" : "",
+	"super" : "Morph",
+	"category" : "rogueman",
+	"classinstvars" : [ ],
+	"pools" : [ ],
+	"classvars" : [ ],
+	"instvars" : [
+		"isGettingDarker"
+	],
+	"name" : "CrossMorph",
+	"type" : "normal"
+}
