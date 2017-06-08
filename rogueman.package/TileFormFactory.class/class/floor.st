@@ -1,0 +1,12 @@
+accessing
+floor
+	^ TilePattern withPattern: #(
+		'        '
+		'        '
+		'        '
+		'   ##   '
+		'   ##   '
+		'        '
+		'        '
+		'        '
+	)
