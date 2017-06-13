@@ -3,8 +3,12 @@ initialize
 	"| pixels |"
 	
 	super initialize.
+	
+	self floorForm: (TileFormFactory floor withForeground: (Color blue darker darker darker) background: (Color black)).
+	self wallForm: (TileFormFactory wall withForeground: (Color blue) background: (Color blue darker darker darker)).
 
-	data := #(
+	self data: nil.
+	"#(
 		'################'
 		'#              #'
 		'#              #'
@@ -21,9 +25,9 @@ initialize
 		'#     ###      #'
 		'#              #'
 		'################'
-	).
+	)."
 	
-	self extent: (16 * 8 * self scale)@(16 * 8 * self scale).
+	"self extent: (16 * (self tileWidth))@(16 * (self tileHeight))."
 	
 	"
 	self form: (ColorForm extent: 8@8 depth: Display depth).

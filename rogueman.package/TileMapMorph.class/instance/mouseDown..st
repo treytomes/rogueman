@@ -2,9 +2,7 @@ event handling
 mouseDown: anEvent
 	| mapPoint |
 	
-	mapPoint := (((anEvent cursorPoint) - (self position)) / 16) floor + (1@1).
-	
-	"Transcript open."
+	mapPoint := (((anEvent cursorPoint) - (self position)) / 16) rounded.
 	Transcript show: mapPoint; cr.
 	"anEvent inspect."
 	

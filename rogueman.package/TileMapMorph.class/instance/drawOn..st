@@ -6,11 +6,11 @@ drawOn: aCanvas
 			value := ((data at: y) at: x).
 
 			tile := ((value = (Character space))
-				ifTrue: [ TileFormFactory floor withForeground: (Color blue darker darker darker) background: (Color black) ]
-				ifFalse: [ TileFormFactory wall withForeground: (Color blue) background: (Color blue darker darker darker) ]).
+				ifTrue: [ self floorForm ]
+				ifFalse: [ self wallForm ]).
 			
-			tile := tile scaledToSize: (8 * self scale)@(8 * self scale).
+			tile := tile scaledToSize: (self tileWidth)@(self tileHeight).
 			
-			aCanvas drawImage: tile at: (self position + (((x - 1) * (8 * self scale))@((y - 1) * (8 * self scale)))).
+			aCanvas drawImage: tile at: (self position + (((x - 1) * (self tileWidth))@((y - 1) * (self tileHeight)))).
 		].
 	].
